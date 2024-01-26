@@ -21,6 +21,8 @@ public class PlayerJumpState : PlayerBaseState
     {
         if (_playerStateManager.Rigidbody2D.velocity.y < -0.1f)
             _playerStateManager.ChangeState(_playerStateManager.GetFallState());
+        else if (Input.GetKeyDown(KeyCode.E))
+            _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
     }
 
     public override void FixedUpdateState()

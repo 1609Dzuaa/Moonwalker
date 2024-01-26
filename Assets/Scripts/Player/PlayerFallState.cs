@@ -17,7 +17,9 @@ public class PlayerFallState : PlayerBaseState
 
     public override void UpdateState()
     {
-        if (_playerStateManager.DirX != 0 && _playerStateManager.DetectedGround)
+        if (Input.GetKeyDown(KeyCode.E))
+            _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
+        else if (_playerStateManager.DirX != 0 && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetWalkState());
         else if (_playerStateManager.DirX == 0 && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetIdleState());
