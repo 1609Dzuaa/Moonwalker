@@ -9,6 +9,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] float _radius;
     [SerializeField] LayerMask _groundLayer;
     [SerializeField] Transform _groundCheck;
+    [SerializeField] Transform _hatPosition;
 
     Animator _anim;
     Rigidbody2D _rb;
@@ -81,7 +82,7 @@ public class PlayerStateManager : MonoBehaviour
         _state.UpdateState();
         GroundCheck();
         HandleFlipSprite();
-        Debug.Log("G: " + _detectedGround);
+        //Debug.Log("G: " + _detectedGround);
     }
 
     private void FixedUpdate()
@@ -124,5 +125,13 @@ public class PlayerStateManager : MonoBehaviour
     private void AllowUpdateHatAttack()
     {
         _hatAttack._allowUpdate = true;
+        //event cua Hat Attack animation
     }
+
+    private void InvokeHatFunction()
+    {
+        HatInfo info = new HatInfo(_hatPosition.transform.position, _isFacingRight);
+        EventsManager.Instance.NotifyObservers(GameEnums.EEvents.HatOnBeingThrew, info);
+    }
+
 }

@@ -10,4 +10,9 @@ public static class GameEnums
     public enum EEnemiesState
     {idle, walk, attack, gothit}
 
+    public enum EEvents
+    {
+        HatOnBeingThrew,
+    }
+
 }
