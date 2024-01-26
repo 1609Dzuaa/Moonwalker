@@ -19,7 +19,7 @@ public class EnemiesStateFactory : MonoBehaviour
     }
     public EnemiesBaseState BommanWalk()
     {
-        return new BommanAttackState(_context, this);
+        return new BommanWalkState(_context, this);
     }
     public EnemiesBaseState BommanAttack()
     {

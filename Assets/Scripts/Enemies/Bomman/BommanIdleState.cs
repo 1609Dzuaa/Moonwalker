@@ -22,6 +22,10 @@ public class BommanIdleState : EnemiesIdleState
     public override void CheckSwitchState()
     {
         base.CheckSwitchState();
+        if(enemy.SeePlayer)
+        {
+            SwitchState(factory.BommanAttack());
+        }
     }
 
     public override void ExitState()
