@@ -22,10 +22,13 @@ public class PlayerWalkState : PlayerBaseState
             _playerStateManager.ChangeState(_playerStateManager.GetIdleState());
         else if (Input.GetButtonDown("Jump") && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetJumpState());
+        else if (Input.GetKeyDown(KeyCode.E))
+            _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
     }
 
     public override void FixedUpdateState()
     {
-        _playerStateManager.Rigidbody2D.velocity = new Vector2(_playerStateManager.DirX * _playerStateManager.MovementSpeed, _playerStateManager.Rigidbody2D.velocity.y);
+        //if (_playerStateManager.IsFacingRight)
+            _playerStateManager.Rigidbody2D.velocity = new Vector2(_playerStateManager.DirX * _playerStateManager.MovementSpeed, _playerStateManager.Rigidbody2D.velocity.y);
     }
 }

@@ -5,5 +5,5 @@ using UnityEngine;
 public static class GameEnums 
 {
     public enum EPlayerState
-    { idle, walk, jump, }
+    { idle, walk, jump, hatAttack, }
 }

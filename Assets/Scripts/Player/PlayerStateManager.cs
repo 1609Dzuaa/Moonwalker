@@ -23,6 +23,7 @@ public class PlayerStateManager : MonoBehaviour
     PlayerWalkState _walk = new();
     PlayerJumpState _jump = new();
     PlayerFallState _fall = new();
+    PlayerHatAttack _hatAttack = new();
 
     #endregion
 
@@ -33,6 +34,8 @@ public class PlayerStateManager : MonoBehaviour
     public float DirX { get => _dirX; }
 
     public bool DetectedGround { get => _detectedGround; }
+
+    public bool IsFacingRight { get => _isFacingRight; }
 
     public Animator Animator { get => _anim; }
 
@@ -45,6 +48,8 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerJumpState GetJumpState() => _jump;
 
     public PlayerFallState GetFallState() => _fall;
+
+    public PlayerHatAttack GetHatAttack() => _hatAttack;
 
     private void Awake()
     {
@@ -72,7 +77,7 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _dirX = Input.GetAxisRaw("Horizontal");
+        _dirX = Input.GetAxisRaw("Horizontal") * -1;
         _state.UpdateState();
         GroundCheck();
         HandleFlipSprite();
@@ -114,5 +119,10 @@ public class PlayerStateManager : MonoBehaviour
     {
         if (_groundCheck)
             Gizmos.DrawSphere(_groundCheck.transform.position, _radius);
+    }
+
+    private void AllowUpdateHatAttack()
+    {
+        _hatAttack._allowUpdate = true;
     }
 }
