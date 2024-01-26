@@ -57,7 +57,7 @@ public class PlayerStateManager : MonoBehaviour
         _dirX = Input.GetAxis("Horizontal");
         _state.UpdateState();
         GroundCheck();
-        //Debug.Log("G: " + _detectedGround);
+        Debug.Log("G: " + _detectedGround);
     }
 
     private void FixedUpdate()
