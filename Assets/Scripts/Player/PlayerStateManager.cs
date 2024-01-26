@@ -12,9 +12,9 @@ public class PlayerStateManager : MonoBehaviour
 
     Animator _anim;
     Rigidbody2D _rb;
-    //Transform _groundCheck;
     float _dirX;
     bool _detectedGround;
+    bool _isFacingRight = true;
 
     #region States
 
@@ -23,6 +23,7 @@ public class PlayerStateManager : MonoBehaviour
     PlayerWalkState _walk = new();
     PlayerJumpState _jump = new();
     PlayerFallState _fall = new();
+    PlayerHatAttack _hatAttack = new();
 
     #endregion
 
@@ -33,6 +34,8 @@ public class PlayerStateManager : MonoBehaviour
     public float DirX { get => _dirX; }
 
     public bool DetectedGround { get => _detectedGround; }
+
+    public bool IsFacingRight { get => _isFacingRight; }
 
     public Animator Animator { get => _anim; }
 
@@ -46,6 +49,8 @@ public class PlayerStateManager : MonoBehaviour
 
     public PlayerFallState GetFallState() => _fall;
 
+    public PlayerHatAttack GetHatAttack() => _hatAttack;
+
     private void Awake()
     {
         GetReferenceComponents();
@@ -55,7 +60,6 @@ public class PlayerStateManager : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-        //_groundCheck = GetComponent<Transform>();
     }
 
     // Start is called before the first frame update
@@ -73,9 +77,10 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _dirX = Input.GetAxisRaw("Horizontal");
+        _dirX = Input.GetAxisRaw("Horizontal") * -1;
         _state.UpdateState();
         GroundCheck();
+        HandleFlipSprite();
         Debug.Log("G: " + _detectedGround);
     }
 
@@ -91,6 +96,20 @@ public class PlayerStateManager : MonoBehaviour
         _state.EnterState(this);
     }
 
+    private void HandleFlipSprite()
+    {
+        if (_isFacingRight && _dirX < 0)
+            FlippingSprite();
+        else if (!_isFacingRight && _dirX > 0)
+            FlippingSprite();
+    }
+
+    public void FlippingSprite()
+    {
+        _isFacingRight = !_isFacingRight;
+        transform.Rotate(0, 180f, 0);
+    }
+
     private void GroundCheck()
     {
         _detectedGround = Physics2D.OverlapCircle(_groundCheck.position, _radius, _groundLayer);
@@ -100,5 +119,10 @@ public class PlayerStateManager : MonoBehaviour
     {
         if (_groundCheck)
             Gizmos.DrawSphere(_groundCheck.transform.position, _radius);
+    }
+
+    private void AllowUpdateHatAttack()
+    {
+        _hatAttack._allowUpdate = true;
     }
 }
