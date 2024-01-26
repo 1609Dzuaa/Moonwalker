@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemiesWalkState : MonoBehaviour
+public class EnemiesWalkState : EnemiesBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public EnemiesWalkState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void CheckSwitchState()
     {
-        
+
+    }
+
+    public override void EnterState()
+    {
+        Debug.Log("Hello from Walk State");
+    }
+
+    public override void ExitState()
+    {
+
+    }
+
+    public override void UpdateState()
+    {
+        CheckSwitchState();
+        enemy.Rb.velocity = new Vector2(enemy.WalkSpeed * enemy.RaycastDirX , enemy.Rb.velocity.y);
     }
 }

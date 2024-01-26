@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BommanStateManager : MonoBehaviour
+public class BommanStateManager : EnemiesStateManager
 {
-    // Start is called before the first frame update
-    void Start()
+    public BommanStateManager()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Start()
     {
-        
+        CurrentState = State.BommanIdle();
+        CurrentState.EnterState();
+    }
+
+    public override void GotHit()
+    {
     }
 }

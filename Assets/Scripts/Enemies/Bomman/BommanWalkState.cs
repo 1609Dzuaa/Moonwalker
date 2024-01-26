@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BommanWalkState : MonoBehaviour
+public class BommanWalkState : EnemiesWalkState
 {
-    // Start is called before the first frame update
-    void Start()
+    public BommanWalkState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void EnterState()
     {
-        
+        base.EnterState();
+    }
+
+    public override void UpdateState()
+    {
+        base.UpdateState();
+    }
+
+    public override void CheckSwitchState()
+    {
+        base.CheckSwitchState();
+    }
+
+    public override void ExitState()
+    {
+        base.ExitState();
     }
 }
