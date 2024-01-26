@@ -12,9 +12,9 @@ public class PlayerStateManager : MonoBehaviour
 
     Animator _anim;
     Rigidbody2D _rb;
-    //Transform _groundCheck;
     float _dirX;
     bool _detectedGround;
+    bool _isFacingRight = true;
 
     #region States
 
@@ -55,7 +55,6 @@ public class PlayerStateManager : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-        //_groundCheck = GetComponent<Transform>();
     }
 
     // Start is called before the first frame update
@@ -76,6 +75,7 @@ public class PlayerStateManager : MonoBehaviour
         _dirX = Input.GetAxisRaw("Horizontal");
         _state.UpdateState();
         GroundCheck();
+        HandleFlipSprite();
         Debug.Log("G: " + _detectedGround);
     }
 
@@ -89,6 +89,20 @@ public class PlayerStateManager : MonoBehaviour
         _state.ExitState();
         _state = state;
         _state.EnterState(this);
+    }
+
+    private void HandleFlipSprite()
+    {
+        if (_isFacingRight && _dirX < 0)
+            FlippingSprite();
+        else if (!_isFacingRight && _dirX > 0)
+            FlippingSprite();
+    }
+
+    public void FlippingSprite()
+    {
+        _isFacingRight = !_isFacingRight;
+        transform.Rotate(0, 180f, 0);
     }
 
     private void GroundCheck()
