@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemiesIdleState : MonoBehaviour
+public class EnemiesIdleState : EnemiesBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public EnemiesIdleState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void CheckSwitchState()
     {
-        
+
+    }
+
+    public override void EnterState()
+    {
+        Debug.Log("Hello from Idle State");
+        enemy.Rb.velocity = new Vector2(0f,enemy.Rb.velocity.y);
+    }
+
+    public override void ExitState()
+    {
+
+    }
+
+    public override void UpdateState()
+    {
+        CheckSwitchState();
     }
 }

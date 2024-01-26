@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class EnemiesStateFactory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    EnemiesStateManager _context;
+
+    public EnemiesStateFactory(EnemiesStateManager currentContext)
     {
-        
+        _context = currentContext;
     }
 
-    // Update is called once per frame
-    void Update()
+    //Bomman
+    public EnemiesBaseState BommanIdle()
     {
-        
+        return new BommanIdleState(_context, this);
     }
+    public EnemiesBaseState BommanWalk()
+    {
+        return new BommanAttackState(_context, this);
+    }
+    public EnemiesBaseState BommanAttack()
+    {
+        return new BommanAttackState(_context, this);
+    }
+    
 }

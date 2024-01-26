@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BommanIdleState : MonoBehaviour
+public class BommanIdleState : EnemiesIdleState
 {
-    // Start is called before the first frame update
-    void Start()
+    public BommanIdleState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void EnterState()
     {
-        
+        base.EnterState();
+        Debug.Log("Chào tao là bom");
+    }
+
+    public override void UpdateState()
+    {
+        base.UpdateState();
+    }
+
+    public override void CheckSwitchState()
+    {
+        base.CheckSwitchState();
+    }
+
+    public override void ExitState()
+    {
+        base.ExitState();
     }
 }

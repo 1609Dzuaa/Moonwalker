@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemiesAttackState : MonoBehaviour
+public class EnemiesAttackState : EnemiesBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public EnemiesAttackState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void CheckSwitchState()
     {
-        
+
+    }
+
+    public override void EnterState()
+    {
+        Debug.Log("Hello from Attack State");
+    }
+
+    public override void ExitState()
+    {
+
+    }
+
+    public override void UpdateState()
+    {
+        CheckSwitchState();
     }
 }
