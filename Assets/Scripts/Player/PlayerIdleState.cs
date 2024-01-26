@@ -22,6 +22,8 @@ public class PlayerIdleState : PlayerBaseState
             _playerStateManager.ChangeState(_playerStateManager.GetWalkState());
         else if (Input.GetButtonDown("Jump") && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetJumpState());
+        else if (Input.GetKeyDown(KeyCode.E))
+            _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
     }
 
     public override void FixedUpdateState()
