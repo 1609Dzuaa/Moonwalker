@@ -6,6 +6,7 @@ public class PlayerWalkState : PlayerBaseState
 {
     public override void EnterState(PlayerStateManager playerStateManager)
     {
+        base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.walk);
         Debug.Log("tao la walk");
     }
