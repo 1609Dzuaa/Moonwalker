@@ -11,11 +11,12 @@ public class BommanWalkState : EnemiesWalkState
     public override void EnterState()
     {
         base.EnterState();
+        Debug.Log("Bom đi bộ");
     }
 
     public override void UpdateState()
     {
-        base.UpdateState();
+        enemy.Rb.velocity = new Vector2(- enemy.WalkSpeed * enemy.RaycastDirX , enemy.Rb.velocity.y);
     }
 
     public override void CheckSwitchState()

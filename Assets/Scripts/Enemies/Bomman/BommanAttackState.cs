@@ -11,6 +11,8 @@ public class BommanAttackState : EnemiesAttackState
     public override void EnterState()
     {
         base.EnterState();
+        Debug.Log("Bom nổ");
+        enemy.StartCoroutine(SwitchToWalkState());
     }
 
     public override void UpdateState()
@@ -26,5 +28,11 @@ public class BommanAttackState : EnemiesAttackState
     public override void ExitState()
     {
         base.ExitState();
+    }
+    
+    public IEnumerator SwitchToWalkState()
+    {
+        yield return new WaitForSeconds(1f);
+        SwitchState(factory.BommanWalk());
     }
 }

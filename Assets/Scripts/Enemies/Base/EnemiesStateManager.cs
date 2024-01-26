@@ -86,6 +86,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
 
     public virtual void Update()
     {
+        if(CurrentState != null)
         CurrentState.UpdateState();
         WallCheck();
         PlayerCheck();
