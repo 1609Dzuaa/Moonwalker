@@ -8,9 +8,11 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] float _jumpForce;
     [SerializeField] float _radius;
     [SerializeField] LayerMask _groundLayer;
+    [SerializeField] Transform _groundCheck;
 
+    Animator _anim;
     Rigidbody2D _rb;
-    Transform _groundCheck;
+    //Transform _groundCheck;
     float _dirX;
     bool _detectedGround;
 
@@ -32,6 +34,8 @@ public class PlayerStateManager : MonoBehaviour
 
     public bool DetectedGround { get => _detectedGround; }
 
+    public Animator Animator { get => _anim; }
+
     public Rigidbody2D Rigidbody2D { get => _rb; set => _rb = value; }
 
     public PlayerIdleState GetIdleState() => _idle;
@@ -42,11 +46,26 @@ public class PlayerStateManager : MonoBehaviour
 
     public PlayerFallState GetFallState() => _fall;
 
+    private void Awake()
+    {
+        GetReferenceComponents();
+    }
+
+    private void GetReferenceComponents()
+    {
+        _anim = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
+        //_groundCheck = GetComponent<Transform>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _groundCheck = GetComponent<Transform>();
+        SetupProperties();
+    }
+
+    private void SetupProperties()
+    {
         _state = _idle;
         _state.EnterState(this);
     }
@@ -54,10 +73,10 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _dirX = Input.GetAxis("Horizontal");
+        _dirX = Input.GetAxisRaw("Horizontal");
         _state.UpdateState();
         GroundCheck();
-        //Debug.Log("G: " + _detectedGround);
+        Debug.Log("G: " + _detectedGround);
     }
 
     private void FixedUpdate()
@@ -75,5 +94,11 @@ public class PlayerStateManager : MonoBehaviour
     private void GroundCheck()
     {
         _detectedGround = Physics2D.OverlapCircle(_groundCheck.position, _radius, _groundLayer);
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (_groundCheck)
+            Gizmos.DrawSphere(_groundCheck.transform.position, _radius);
     }
 }

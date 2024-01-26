@@ -7,6 +7,7 @@ public class PlayerJumpState : PlayerBaseState
     public override void EnterState(PlayerStateManager playerStateManager)
     {
         base.EnterState(playerStateManager);
+        _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.jump);
         Jump();
         Debug.Log("tao la Jump");
     }
