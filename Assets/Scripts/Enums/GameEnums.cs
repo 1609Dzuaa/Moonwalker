@@ -13,6 +13,7 @@ public static class GameEnums
     public enum EEvents
     {
         HatOnBeingThrew,
+        HatOnBackToPlayer
     }
 
 }

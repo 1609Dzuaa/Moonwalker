@@ -389,7 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201357097}
   m_Layer: 0
-  m_Name: Hat
+  m_Name: HatPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201357096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 1.79, z: 0}
+  m_LocalPosition: {x: -1, y: 1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 1701504181}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,7 +503,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 558045622, guid: 825dea367e228a7429013ac76d578c48, type: 3}
+  m_Sprite: {fileID: 1887872503, guid: 0331fa35ab4c79f449a5bcb772a8bbf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 4
-  _jumpForce: 700
+  _jumpForce: 800
   _radius: 0.4
   _groundLayer:
     serializedVersion: 2
