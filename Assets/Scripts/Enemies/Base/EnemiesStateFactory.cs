@@ -25,9 +25,7 @@ public class EnemiesStateFactory : MonoBehaviour
     {
         return new BommanAttackState(_context, this);
     }
-
-    public EnemiesBaseState BommanGotHit()
-    {
+    public EnemiesBaseState BommanGotHit(){
         return new BommanGotHitState(_context, this);
     }
 
@@ -47,5 +45,23 @@ public class EnemiesStateFactory : MonoBehaviour
     public EnemiesBaseState StomberAttack()
     {
         return new StomberAttackState(_context, this);
+    }
+    
+    //Gunner
+    public EnemiesBaseState GunnerIdle()
+    {
+        return new GunnerIdleState(_context, this);
+    }
+    public EnemiesBaseState GunnerWalk()
+    {
+        return new GunnerWalkState(_context, this);
+    }
+    public EnemiesBaseState GunnerAttack()
+    {
+        return new GunnerAttackState(_context, this);
+    }
+    public EnemiesBaseState GunnerGotHit()
+    {
+        return new GunnerGotHitState(_context, this);
     }
 }

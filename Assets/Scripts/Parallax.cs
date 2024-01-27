@@ -1,43 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class Parallax : MonoBehaviour
 {
-    private float spriteLenght;
-    private float startPosition;
+    private CameraController _cam;
+    private float _startPosX;
+    private float _startPosY;
+    private float _length;
+    [SerializeField] private float _xParalaxEffect;
+    [SerializeField] private float _yParalaxEffect;
 
-    [SerializeField] private GameObject mainCamera;
-    [SerializeField] private float parallaxFactor;
-
-    private void Update()
+    void Awake()
     {
-        Move();
+        _cam = FindObjectOfType<CameraController>();
+        _length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
+
     private void Start()
     {
-        GetStartPosition();
-        GetSpriteLengh();
-
-    }
-    void GetStartPosition()
-    {
-        startPosition = transform.position.x;
-    }
-    void GetSpriteLengh()
-    {
-        spriteLenght = GetComponentInChildren<SpriteRenderer>().bounds.size.x;
+        _startPosX = transform.position.x;
+        _startPosY = transform.position.y;
     }
 
-    void Move()
+    private void FixedUpdate()
     {
-        float temp = (mainCamera.transform.position.x * (1 - parallaxFactor));
-        float distance = (mainCamera.transform.position.x * parallaxFactor);
-        transform.position = new Vector3(startPosition + distance, transform.position.y, transform.position.z);
+        float temp = _cam.transform.position.x * (1 - _xParalaxEffect);
+        float distX = _cam.transform.position.x * _xParalaxEffect;
+        float distY = _cam.transform.position.y * _yParalaxEffect;
 
-        if (temp > startPosition)
-            startPosition += spriteLenght;
-        else if (temp < startPosition - spriteLenght)
-            startPosition -= spriteLenght;
+        transform.position = new Vector2(_startPosX + distX, _startPosY + distY);
+
+        if(temp > _startPosX + _length) _startPosX += _length;
+        else if(temp < _startPosX - _length) _startPosX -= _length;
     }
 }

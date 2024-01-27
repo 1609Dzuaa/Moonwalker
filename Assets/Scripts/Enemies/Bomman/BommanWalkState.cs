@@ -13,6 +13,7 @@ public class BommanWalkState : EnemiesWalkState
         base.EnterState();
         Debug.Log("Bom đi bộ");
         enemy.FlipXObject();
+        enemy.StartCoroutine(SwitchToIdleState());
     }
 
     public override void UpdateState()
@@ -28,5 +29,12 @@ public class BommanWalkState : EnemiesWalkState
     public override void ExitState()
     {
         base.ExitState();
+        enemy.FlipXObject();
+    }
+
+    private IEnumerator SwitchToIdleState()
+    {
+        yield return new WaitForSeconds(2f);
+        SwitchState(factory.BommanIdle());
     }
 }
