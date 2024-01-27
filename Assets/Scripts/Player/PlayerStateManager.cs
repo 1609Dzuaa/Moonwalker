@@ -24,7 +24,6 @@ public class PlayerStateManager : MonoBehaviour
     PlayerIdleState _idle = new();
     PlayerWalkState _walk = new();
     PlayerJumpState _jump = new();
-    PlayerFallState _fall = new();
     PlayerHatAttack _hatAttack = new();
 
     #endregion
@@ -50,8 +49,6 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerWalkState GetWalkState() => _walk;
 
     public PlayerJumpState GetJumpState() => _jump;
-
-    public PlayerFallState GetFallState() => _fall;
 
     public PlayerHatAttack GetHatAttack() => _hatAttack;
 
@@ -146,6 +143,11 @@ public class PlayerStateManager : MonoBehaviour
     private void HatBack(object obj)
     {
         _canThrowHat = true;
+    }
+
+    private void AllowUpdateJump()
+    {
+        _jump._allowUpdate = true;
     }
 
 }

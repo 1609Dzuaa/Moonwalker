@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 4
-  _jumpForce: 700
+  _jumpForce: 800
   _radius: 0.4
   _groundLayer:
     serializedVersion: 2
