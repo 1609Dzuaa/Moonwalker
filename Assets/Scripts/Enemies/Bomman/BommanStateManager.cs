@@ -17,4 +17,9 @@ public class BommanStateManager : EnemiesStateManager
     public override void GotHit()
     {
     }
+
+    public void Attack()
+    {
+        ObjectPooler.Instant.GetPoolObject("Egg", transform.position, Quaternion.identity);
+    }
 }

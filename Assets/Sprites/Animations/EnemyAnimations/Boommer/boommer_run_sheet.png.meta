@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 81ccc96fcae8fe441b9e97a4ab510e41
+guid: 39ec7ba6a40f8fc46a3af17df7042896
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -119,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e8f4b8c4deaf054fbbbbf672d6d381b
-      internalID: 628049598
+      spriteID: 955f053e274b73d4ea2f138b62772c4d
+      internalID: 1533811015
       vertices: []
       indices: 
       edges: []
@@ -140,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eb552b226d281840b4fee19000c5dbb
-      internalID: -871273237
+      spriteID: e1e845a9d87e3f94299ec880184c8e90
+      internalID: 1620301048
       vertices: []
       indices: 
       edges: []
@@ -161,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c315765f51a715144aab3cd70ce42aee
-      internalID: -1878635347
+      spriteID: cf1a28fe12b6efd4799b26209fc7cf26
+      internalID: -31487873
       vertices: []
       indices: 
       edges: []
@@ -182,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66ed81f5f08de6b479770cd71d851011
-      internalID: -1315532637
+      spriteID: 4e61d0859c66cf54c9a0a1062568b619
+      internalID: 332846259
       vertices: []
       indices: 
       edges: []
@@ -203,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72fd6f22532daa641aa40d39956468e0
-      internalID: 200934322
+      spriteID: b271ea5a33d488f48a407f079abcbf59
+      internalID: 1637233117
       vertices: []
       indices: 
       edges: []
@@ -224,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b13141961cee1964eaeab31090c73caf
-      internalID: 683883521
+      spriteID: cb8b6925b12efe642b59b2b6fc05a189
+      internalID: -632483958
       vertices: []
       indices: 
       edges: []
@@ -245,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c474dfe591a46f48a6c6fd2bc943705
-      internalID: 227987377
+      spriteID: df7d117036a7e164eaea96ac9f1febcf
+      internalID: 690986837
       vertices: []
       indices: 
       edges: []
@@ -266,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b48240a149bd98f44b8d0882b0ebedb0
-      internalID: -7250268
+      spriteID: 25e8af6f7d4422448b7b2c84e07be97e
+      internalID: -961867293
       vertices: []
       indices: 
       edges: []
@@ -287,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40ad852f02c127c4ea38aa40e868b67a
-      internalID: 952897836
+      spriteID: f445b75a0b1529d4bbf818849d9c48f4
+      internalID: -867292571
       vertices: []
       indices: 
       edges: []
@@ -304,15 +316,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boommer_run_sheet_2: -1878635347
-      boommer_run_sheet_3: -1315532637
-      boommer_run_sheet_1: -871273237
-      boommer_run_sheet_8: 952897836
-      boommer_run_sheet_0: 628049598
-      boommer_run_sheet_5: 683883521
-      boommer_run_sheet_4: 200934322
-      boommer_run_sheet_6: 227987377
-      boommer_run_sheet_7: -7250268
+      boommer_run_sheet_2: -31487873
+      boommer_run_sheet_3: 332846259
+      boommer_run_sheet_1: 1620301048
+      boommer_run_sheet_8: -867292571
+      boommer_run_sheet_0: 1533811015
+      boommer_run_sheet_5: -632483958
+      boommer_run_sheet_4: 1637233117
+      boommer_run_sheet_6: 690986837
+      boommer_run_sheet_7: -961867293
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

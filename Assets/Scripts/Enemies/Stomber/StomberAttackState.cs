@@ -8,6 +8,9 @@ public class StomberAttackState : EnemiesAttackState
     {
     }
 
+    private bool _called;
+    private IEnumerator enumerator;
+
     public override void EnterState()
     {
         base.EnterState();
@@ -18,6 +21,13 @@ public class StomberAttackState : EnemiesAttackState
     {
         base.UpdateState();
         Debug.Log("xieen");
+
+        if(!enemy.SeePlayer && !_called)
+        {
+            _called = true;
+            enumerator = SwitchToIdleState();
+            enemy.StartCoroutine(enumerator);
+        }
     }
 
     public override void CheckSwitchState()
@@ -28,5 +38,11 @@ public class StomberAttackState : EnemiesAttackState
     public override void ExitState()
     {
         base.ExitState();
+    }
+
+    private IEnumerator SwitchToIdleState()
+    {
+        yield return new WaitForSeconds(1f);
+        SwitchState(factory.StomberIdle());
     }
 }
