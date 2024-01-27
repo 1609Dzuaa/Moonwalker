@@ -14,6 +14,7 @@ public class HatController : MonoBehaviour
 {
     [SerializeField] float _speed;
     [SerializeField] float _timeToBackToPlayer;
+    [SerializeField] float _hatMaxTime;
     Rigidbody2D _rb;
     float _entryTime;
     bool _hasBack;
@@ -46,6 +47,9 @@ public class HatController : MonoBehaviour
             _speed = -_speed;
             _hasBack = true;
         }
+
+        if (Time.time - _entryTime >= _hatMaxTime)
+            gameObject.SetActive(false);
     }
 
     private void FixedUpdate()

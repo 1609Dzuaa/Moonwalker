@@ -17,6 +17,7 @@ public class PlayerStateManager : MonoBehaviour
 
     Animator _anim;
     Rigidbody2D _rb;
+    BoxCollider2D _boxCol;
     float _dirX;
     bool _detectedGround;
     bool _isFacingRight;
@@ -30,6 +31,7 @@ public class PlayerStateManager : MonoBehaviour
     PlayerJumpState _jump = new();
     PlayerHatAttack _hatAttack = new();
     PlayerStompAttack _stompAttack = new();
+    PlayerGotHitState _gotHit = new();
 
     #endregion
 
@@ -59,7 +61,9 @@ public class PlayerStateManager : MonoBehaviour
 
     public PlayerHatAttack GetHatAttack() => _hatAttack;
 
-    public PlayerStompAttack GetStompAttack() => _stompAttack;  
+    public PlayerStompAttack GetStompAttack() => _stompAttack;
+
+    public BoxCollider2D GetBoxCol2D() => _boxCol;
 
     private void Awake()
     {
@@ -70,6 +74,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
+        _boxCol = GetComponent<BoxCollider2D>();
     }
 
     // Start is called before the first frame update
@@ -107,6 +112,18 @@ public class PlayerStateManager : MonoBehaviour
         _state.ExitState();
         _state = state;
         _state.EnterState(this);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemies"))
+            ChangeState(_gotHit);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemies"))
+            ChangeState(_gotHit);
     }
 
     private void HandleFlipSprite()
@@ -172,5 +189,10 @@ public class PlayerStateManager : MonoBehaviour
     private void CanDamageEnemies()
     {
         _stomp.SetActive(true);
+    }
+
+    private void AllowUpdateGotHit()
+    {
+        _gotHit._allowUpdate = true;
     }
 }
