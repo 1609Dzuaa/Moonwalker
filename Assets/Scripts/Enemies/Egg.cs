@@ -42,6 +42,11 @@ public class Egg : MonoBehaviour
             ObjectPooler.Instant.GetPoolObject("EggPiece", transform.position, Quaternion.identity);
             gameObject.SetActive(false);
         }
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            ObjectPooler.Instant.GetPoolObject("EggPiece", transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+        }
     }
 
 
