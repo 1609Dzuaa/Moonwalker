@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StomberAttackState : EnemiesAttackState
+public class StomberRunState : EnemiesWalkState
 {
-    public StomberAttackState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
+    public StomberRunState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
     }
 
     public override void EnterState()
     {
         base.EnterState();
+        Debug.Log("Stomber Run");
     }
 
     public override void UpdateState()
     {
-        base.UpdateState();
+        enemy.Rb.velocity = new Vector2(2* enemy.WalkSpeed * enemy.RaycastDirX , enemy.Rb.velocity.y);
+
     }
 
     public override void CheckSwitchState()
