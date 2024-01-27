@@ -10,12 +10,14 @@ public class PlayerStompAttack : PlayerBaseState
     {
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.footAttack);
+        _playerStateManager.GetStomp().SetActive(true);
         Debug.Log("tao la F Attack");
     }
 
     public override void ExitState()
     {
         _allowUpdate = false;
+        _playerStateManager.GetStomp().SetActive(false);
     }
 
     public override void UpdateState()
