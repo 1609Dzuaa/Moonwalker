@@ -102,7 +102,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.gameObject.name == "Player")|| other.gameObject.CompareTag("Hat"))
+        if (other.gameObject.CompareTag("Hat"))
         {
             GotHit();
         }
