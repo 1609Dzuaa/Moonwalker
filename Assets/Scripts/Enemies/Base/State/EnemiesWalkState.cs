@@ -13,7 +13,7 @@ public class EnemiesWalkState : EnemiesBaseState
 
     public override void EnterState()
     {
-        Debug.Log("Hello from Walk State");
+        //Debug.Log("Hello from Walk State");
         enemy.Anim.SetInteger("State", (int)GameEnums.EEnemiesState.walk);
     }
 

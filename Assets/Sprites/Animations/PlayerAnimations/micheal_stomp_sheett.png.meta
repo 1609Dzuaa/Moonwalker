@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +115,574 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 11
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec18a30c78cd83b40a11558336513aa2
+      internalID: 936502682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 11
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8838122d38fe14419251e944388b3bd
+      internalID: -544891464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 11
+        width: 18
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38fe9cad2bfd494ea19776aadaee143
+      internalID: -1943725608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 11
+        width: 18
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef55dcda6ee163443947ca7edbe475dd
+      internalID: 37662026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_4
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 11
+        width: 18
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1929e913e5339a2438a81845d34e6c2e
+      internalID: 2090554473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_5
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 11
+        width: 19
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94f5c29d032d7d4ca2da87b50bc64e3
+      internalID: -1693415480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_6
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 45
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2c09c1f6d11924aa7c24d8cc926552
+      internalID: -29329465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_7
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 11
+        width: 17
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7c7f3d42c787f48a7cb33326ab5f10
+      internalID: -24913537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_8
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 45
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162d366ee834bb94393bed5e2c8c62af
+      internalID: -99827386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_9
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 11
+        width: 17
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de50776dd04e90b42b96442cd8d99270
+      internalID: -210127933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_10
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 44
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3988a9d29dc6fe44aaf865563c7ee76a
+      internalID: -783775729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_11
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 11
+        width: 13
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c37b5ccb6a21934d986290dec6388bc
+      internalID: 511724996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_12
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 10
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51c57c921a156d4394f83bdd1ec8d95
+      internalID: -1233896431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_13
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 10
+        width: 25
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13aecfb5f187ae746b5c739fb9c4a9b7
+      internalID: 2130399943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_14
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 10
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65331cac781546b469807c97cca96874
+      internalID: 1889173691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_15
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 7
+        width: 44
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4994fa0cfc167734da896e3f475b955d
+      internalID: 272906254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_16
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 7
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1745ffd27247144bcc0cd1ac874c01
+      internalID: 82180183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_17
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 7
+        width: 43
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7bd8def00600c4583bb6361a1a5545
+      internalID: -451375329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_18
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 10
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93a6ef308f45934ea718fdb45f4c1eb
+      internalID: -2008264751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_19
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 45
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89efcbf4804d72d48a29eafe75069834
+      internalID: -534900945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_20
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 11
+        width: 13
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e114a44098e62042a9f6cfa4286dcb9
+      internalID: -1634924102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_21
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 11
+        width: 14
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339d3338bff1cae4e88789ee122dec98
+      internalID: -290457877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_22
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 45
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba1f25c5e207b5459c15d4db7843942
+      internalID: -1727452313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_23
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 11
+        width: 18
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16845b8fba37724185439709880d451
+      internalID: 1241205473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_24
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 11
+        width: 18
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11a90b16a30f1648b0ad3393b184567
+      internalID: 61020673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_25
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 11
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a31a9b1540606349a11422747279f37
+      internalID: 911753361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: micheal_stomp_sheett_26
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 11
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf641f0a2490a58459462bf628ce4147
+      internalID: 1444910405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +693,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      micheal_stomp_sheett_5: -1693415480
+      micheal_stomp_sheett_0: 936502682
+      micheal_stomp_sheett_1: -544891464
+      micheal_stomp_sheett_14: 1889173691
+      micheal_stomp_sheett_18: -2008264751
+      micheal_stomp_sheett_8: -99827386
+      micheal_stomp_sheett_21: -290457877
+      micheal_stomp_sheett_15: 272906254
+      micheal_stomp_sheett_17: -451375329
+      micheal_stomp_sheett_6: -29329465
+      micheal_stomp_sheett_20: -1634924102
+      micheal_stomp_sheett_22: -1727452313
+      micheal_stomp_sheett_25: 911753361
+      micheal_stomp_sheett_7: -24913537
+      micheal_stomp_sheett_13: 2130399943
+      micheal_stomp_sheett_24: 61020673
+      micheal_stomp_sheett_4: 2090554473
+      micheal_stomp_sheett_10: -783775729
+      micheal_stomp_sheett_16: 82180183
+      micheal_stomp_sheett_9: -210127933
+      micheal_stomp_sheett_11: 511724996
+      micheal_stomp_sheett_12: -1233896431
+      micheal_stomp_sheett_3: 37662026
+      micheal_stomp_sheett_23: 1241205473
+      micheal_stomp_sheett_26: 1444910405
+      micheal_stomp_sheett_19: -534900945
+      micheal_stomp_sheett_2: -1943725608
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

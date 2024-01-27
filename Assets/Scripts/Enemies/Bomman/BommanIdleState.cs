@@ -11,7 +11,7 @@ public class BommanIdleState : EnemiesIdleState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Chào tao là bom");
+        //Debug.Log("Chào tao là bom");
     }
 
     public override void UpdateState()

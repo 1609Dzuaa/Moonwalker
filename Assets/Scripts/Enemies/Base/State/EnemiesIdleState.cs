@@ -15,7 +15,7 @@ public class EnemiesIdleState : EnemiesBaseState
 
     public override void EnterState()
     {
-        Debug.Log("Hello from Idle State");
+        //Debug.Log("Hello from Idle State");
         enemy.Anim.SetInteger("State", (int)GameEnums.EEnemiesState.idle);
         enemy.Rb.velocity = new Vector2(0f,enemy.Rb.velocity.y);
     }

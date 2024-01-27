@@ -11,7 +11,7 @@ public class BommanAttackState : EnemiesAttackState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Bom nổ");
+        //Debug.Log("Bom nổ");
         enemy.Rb.velocity = new Vector2(0f, enemy.Rb.velocity.y);
         enemy.StartCoroutine(SwitchToWalkState());
     }
