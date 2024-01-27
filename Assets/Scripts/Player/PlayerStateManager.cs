@@ -11,8 +11,7 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] LayerMask _groundLayer;
     [SerializeField] Transform _groundCheck;
     [SerializeField] Transform _hatPosition;
-    [SerializeField] Vector2 _stompSize;
-    [SerializeField] LayerMask _enemiesLayer;
+    [SerializeField] GameObject _stomp;
 
     Animator _anim;
     Rigidbody2D _rb;
@@ -59,6 +58,8 @@ public class PlayerStateManager : MonoBehaviour
 
     public PlayerStompAttack GetStompAttack() => _stompAttack;
 
+    public GameObject GetStomp() => _stomp;
+
     private void Awake()
     {
         GetReferenceComponents();
@@ -80,6 +81,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         _state = _idle;
         _state.EnterState(this);
+        _stomp.SetActive(false);
         EventsManager.Instant.SubcribeToAnEvent(GameEnums.EEvents.HatOnBackToPlayer, HatBack);
     }
 
@@ -154,7 +156,7 @@ public class PlayerStateManager : MonoBehaviour
         _jump._allowUpdate = true;
     }
 
-    private void AllowUpdateFootAttack()
+    private void AllowUpdateStompAttack()
     {
         _stompAttack._allowUpdate = true;
     }

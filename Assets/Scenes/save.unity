@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2457678538326584896, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.59
+      value: -19.75
       objectReference: {fileID: 0}
     - target: {fileID: 2457678538326584896, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -267,6 +267,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2457678538326584899, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
+      propertyPath: _stomp
+      value: 
+      objectReference: {fileID: 312931841}
     - target: {fileID: 2457678538326584899, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
       propertyPath: _movementSpeed
       value: 10
@@ -406,7 +410,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17870617, y: 0}
+  m_Offset: {x: -0.064736366, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -417,7 +421,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0737553, y: 1}
+  m_Size: {x: 5.9888477, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &416962422
 GameObject:
@@ -1492,7 +1496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8398901294490902121, guid: e2c35660dae583b46a59a3e41a913be5, type: 3}
       propertyPath: _walkSpeed
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8398901294490902123, guid: e2c35660dae583b46a59a3e41a913be5, type: 3}
       propertyPath: m_RootOrder
@@ -1500,11 +1504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8398901294490902123, guid: e2c35660dae583b46a59a3e41a913be5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.26
+      value: -16.68
       objectReference: {fileID: 0}
     - target: {fileID: 8398901294490902123, guid: e2c35660dae583b46a59a3e41a913be5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -1.96
       objectReference: {fileID: 0}
     - target: {fileID: 8398901294490902123, guid: e2c35660dae583b46a59a3e41a913be5, type: 3}
       propertyPath: m_LocalPosition.z
