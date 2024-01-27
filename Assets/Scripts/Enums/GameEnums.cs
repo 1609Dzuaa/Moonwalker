@@ -24,6 +24,8 @@ public static class GameEnums
         StompSfx,
         JumpSfx,
         HatSfx,
+        BonkSfx,
+        ShootSfx
     }
 
 }
