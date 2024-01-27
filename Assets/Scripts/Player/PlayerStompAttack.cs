@@ -10,7 +10,7 @@ public class PlayerStompAttack : PlayerBaseState
     {
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.stompAttack);
-        Debug.Log("tao la S Attack");
+        //Debug.Log("tao la S Attack");
     }
 
     public override void ExitState()
