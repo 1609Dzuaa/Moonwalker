@@ -12,6 +12,7 @@ public class BommanAttackState : EnemiesAttackState
     {
         base.EnterState();
         Debug.Log("Bom nổ");
+        enemy.Rb.velocity = new Vector2(0f, enemy.Rb.velocity.y);
         enemy.StartCoroutine(SwitchToWalkState());
     }
 
