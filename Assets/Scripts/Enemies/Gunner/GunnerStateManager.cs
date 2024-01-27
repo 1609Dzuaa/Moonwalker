@@ -35,4 +35,5 @@ public class GunnerStateManager : EnemiesStateManager
         CurrentState = State.GunnerGotHit();
         CurrentState.EnterState();
     }
+    
 }

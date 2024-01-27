@@ -21,7 +21,8 @@ public class StomberStateManager : EnemiesStateManager
     {
         if(SeeGround)
         {
-            //Player GotHit
+            PlayerStateManager player = FindObjectOfType<PlayerStateManager>();
+            player.ChangeState(player.GotHit);
         }
     }
 

@@ -52,6 +52,8 @@ public class PlayerStateManager : MonoBehaviour
     public Rigidbody2D Rigidbody2D { get => _rb; set => _rb = value; }
     public ParticleSystem DustEffect { get => _dustEffect; set => _dustEffect = value; }
     public ParticleSystem DustEffectWalk { get => _dustEffectWalk; set => _dustEffectWalk = value; }
+    public PlayerGotHitState GotHit { get => _gotHit; set => _gotHit = value; }
+
 
     public PlayerIdleState GetIdleState() => _idle;
 
@@ -117,13 +119,13 @@ public class PlayerStateManager : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Enemies"))
-            ChangeState(_gotHit);
+            ChangeState(GotHit);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemies"))
-            ChangeState(_gotHit);
+            ChangeState(GotHit);
     }
 
     private void HandleFlipSprite()
@@ -138,6 +140,11 @@ public class PlayerStateManager : MonoBehaviour
     {
         _isFacingRight = !_isFacingRight;
         transform.Rotate(0, 180f, 0);
+    }
+
+    public void PlayerGotHit()
+    {
+        ChangeState(GotHit);
     }
 
     private void GroundCheck()
@@ -193,6 +200,6 @@ public class PlayerStateManager : MonoBehaviour
 
     private void AllowUpdateGotHit()
     {
-        _gotHit._allowUpdate = true;
+        GotHit._allowUpdate = true;
     }
 }
