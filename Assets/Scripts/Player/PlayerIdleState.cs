@@ -8,7 +8,7 @@ public class PlayerIdleState : PlayerBaseState
     {
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.idle);
-        Debug.Log("tao la idle");
+        //Debug.Log("tao la idle");
     }
 
     public override void ExitState()
@@ -22,7 +22,7 @@ public class PlayerIdleState : PlayerBaseState
             _playerStateManager.ChangeState(_playerStateManager.GetWalkState());
         else if (Input.GetButtonDown("Jump") && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetJumpState());
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) && _playerStateManager.CanThrowHat)
             _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
     }
 

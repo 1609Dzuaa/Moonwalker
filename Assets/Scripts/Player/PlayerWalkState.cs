@@ -8,12 +8,12 @@ public class PlayerWalkState : PlayerBaseState
     {
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.walk);
-        Debug.Log("tao la walk");
+        //Debug.Log("tao la walk");
     }
 
     public override void ExitState()
     {
-        base.ExitState();
+
     }
 
     public override void UpdateState()
@@ -22,13 +22,12 @@ public class PlayerWalkState : PlayerBaseState
             _playerStateManager.ChangeState(_playerStateManager.GetIdleState());
         else if (Input.GetButtonDown("Jump") && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetJumpState());
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) && _playerStateManager.CanThrowHat)
             _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
     }
 
     public override void FixedUpdateState()
     {
-        //if (_playerStateManager.IsFacingRight)
-            _playerStateManager.Rigidbody2D.velocity = new Vector2(_playerStateManager.DirX * _playerStateManager.MovementSpeed, _playerStateManager.Rigidbody2D.velocity.y);
+        _playerStateManager.Rigidbody2D.velocity = new Vector2(_playerStateManager.DirX * -1 * _playerStateManager.MovementSpeed, _playerStateManager.Rigidbody2D.velocity.y);
     }
 }

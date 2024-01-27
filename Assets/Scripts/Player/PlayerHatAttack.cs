@@ -10,7 +10,7 @@ public class PlayerHatAttack : PlayerBaseState
     {
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.hatAttack);
-        Debug.Log("tao la H Attack");
+        //Debug.Log("tao la H Attack");
     }
 
     public override void ExitState()

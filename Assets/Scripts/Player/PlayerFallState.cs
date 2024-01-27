@@ -7,7 +7,7 @@ public class PlayerFallState : PlayerBaseState
     public override void EnterState(PlayerStateManager playerStateManager)
     {
         base.EnterState(playerStateManager);
-        Debug.Log("tao la Fall");
+        //.Log("tao la Fall");
     }
 
     public override void ExitState()
@@ -17,7 +17,7 @@ public class PlayerFallState : PlayerBaseState
 
     public override void UpdateState()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && _playerStateManager.CanThrowHat)
             _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
         else if (_playerStateManager.DirX != 0 && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetWalkState());

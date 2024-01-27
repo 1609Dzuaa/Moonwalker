@@ -30,7 +30,6 @@ public class HatController : MonoBehaviour
     private void OnEnable()
     {
         EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
-        _entryTime = Time.time;
     }
 
     private void OnDisable()
@@ -56,9 +55,23 @@ public class HatController : MonoBehaviour
     private void Enable(object obj)
     {
         gameObject.SetActive(true);
-        HatInfo info = (HatInfo)obj;
+        _entryTime = Time.time;
+        _hasBack = false;
+        _speed = Mathf.Abs(_speed);
 
+        HatInfo info = (HatInfo)obj;
         transform.position = info.Position;
         _isRight = info.ThrewFromRight;
+        _speed = (_isRight) ? _speed : _speed * -1;
+        Debug.Log("isRight, velo: " + _isRight + ", " + _speed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+            EventsManager.Instance.NotifyObservers(GameEnums.EEvents.HatOnBackToPlayer, null);
+        }
     }
 }

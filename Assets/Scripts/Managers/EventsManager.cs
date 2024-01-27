@@ -9,6 +9,7 @@ public class EventsManager : MonoBehaviour
     private Dictionary<GameEnums.EEvents, Action<object>> _dictEvents = new();
     //Thêm sẵn các Action tương ứng với Event trong EnumEvents tại đây
     private Action<object> HatOnBeingThrew;
+    private Action<object> HatOnBackToPlayer;
 
     public static EventsManager Instance
     {
@@ -44,6 +45,7 @@ public class EventsManager : MonoBehaviour
     public void AddEventsToDictionary()
     {
         _dictEvents.Add(GameEnums.EEvents.HatOnBeingThrew, HatOnBeingThrew);
+        _dictEvents.Add(GameEnums.EEvents.HatOnBackToPlayer, HatOnBackToPlayer);
     }
 
     public void SubcribeToAnEvent(GameEnums.EEvents eventType, Action<object> function)

@@ -15,7 +15,8 @@ public class PlayerStateManager : MonoBehaviour
     Rigidbody2D _rb;
     float _dirX;
     bool _detectedGround;
-    bool _isFacingRight = true;
+    bool _isFacingRight;
+    bool _canThrowHat = true;
 
     #region States
 
@@ -37,6 +38,8 @@ public class PlayerStateManager : MonoBehaviour
     public bool DetectedGround { get => _detectedGround; }
 
     public bool IsFacingRight { get => _isFacingRight; }
+
+    public bool CanThrowHat { get => _canThrowHat; }
 
     public Animator Animator { get => _anim; }
 
@@ -63,6 +66,11 @@ public class PlayerStateManager : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
+    private void OnEnable()
+    {
+        EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBackToPlayer, HatBack);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,11 +86,11 @@ public class PlayerStateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _dirX = Input.GetAxisRaw("Horizontal") * -1;
+        _dirX = Input.GetAxisRaw("Horizontal");
         _state.UpdateState();
         GroundCheck();
         HandleFlipSprite();
-        //Debug.Log("G: " + _detectedGround);
+        //Debug.Log("R: " + _isFacingRight);
     }
 
     private void FixedUpdate()
@@ -132,6 +140,12 @@ public class PlayerStateManager : MonoBehaviour
     {
         HatInfo info = new HatInfo(_hatPosition.transform.position, _isFacingRight);
         EventsManager.Instance.NotifyObservers(GameEnums.EEvents.HatOnBeingThrew, info);
+        _canThrowHat = false;
+    }
+
+    private void HatBack(object obj)
+    {
+        _canThrowHat = true;
     }
 
 }
