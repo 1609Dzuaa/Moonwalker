@@ -11,6 +11,8 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] LayerMask _groundLayer;
     [SerializeField] Transform _groundCheck;
     [SerializeField] Transform _hatPosition;
+    [SerializeField] Vector2 _stompSize;
+    [SerializeField] LayerMask _enemiesLayer;
 
     Animator _anim;
     Rigidbody2D _rb;
@@ -18,6 +20,7 @@ public class PlayerStateManager : MonoBehaviour
     bool _detectedGround;
     bool _isFacingRight;
     bool _canThrowHat = true;
+    bool _canStomp = true;
 
     #region States
 
@@ -26,6 +29,7 @@ public class PlayerStateManager : MonoBehaviour
     PlayerWalkState _walk = new();
     PlayerJumpState _jump = new();
     PlayerHatAttack _hatAttack = new();
+    PlayerStompAttack _stompAttack = new();
 
     #endregion
 
@@ -52,6 +56,8 @@ public class PlayerStateManager : MonoBehaviour
     public PlayerJumpState GetJumpState() => _jump;
 
     public PlayerHatAttack GetHatAttack() => _hatAttack;
+
+    public PlayerStompAttack GetStompAttack() => _stompAttack;
 
     private void Awake()
     {
@@ -147,4 +153,8 @@ public class PlayerStateManager : MonoBehaviour
         _jump._allowUpdate = true;
     }
 
+    private void AllowUpdateFootAttack()
+    {
+        _stompAttack._allowUpdate = true;
+    }
 }

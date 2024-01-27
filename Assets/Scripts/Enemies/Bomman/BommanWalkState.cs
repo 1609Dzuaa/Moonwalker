@@ -11,7 +11,7 @@ public class BommanWalkState : EnemiesWalkState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Bom đi bộ");
+        //Debug.Log("Bom đi bộ");
         enemy.FlipXObject();
         enemy.StartCoroutine(SwitchToIdleState());
     }

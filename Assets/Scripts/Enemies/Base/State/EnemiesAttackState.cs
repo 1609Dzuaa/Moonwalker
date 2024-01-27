@@ -13,7 +13,7 @@ public class EnemiesAttackState : EnemiesBaseState
 
     public override void EnterState()
     {
-        Debug.Log("Hello from Attack State");
+        //Debug.Log("Hello from Attack State");
         enemy.Anim.SetInteger("State", (int)GameEnums.EEnemiesState.attack);
     }
 
