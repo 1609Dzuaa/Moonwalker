@@ -29,8 +29,6 @@ public class PlayerGotHitState : PlayerBaseState
         {
             if (_playerStateManager.DirX != 0)
                 _playerStateManager.ChangeState(_playerStateManager.GetWalkState());
-            else if (_playerStateManager.DirX == 0)
-                _playerStateManager.ChangeState(_playerStateManager.GetIdleState());
             else if (Input.GetButtonDown("Jump") && _playerStateManager.DetectedGround)
                 _playerStateManager.ChangeState(_playerStateManager.GetJumpState());
             else if (Input.GetKeyDown(KeyCode.J) && _playerStateManager.CanThrowHat)

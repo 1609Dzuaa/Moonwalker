@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 15
   _timeToBackToPlayer: 0.5
+  _hatMaxTime: 3
 --- !u!61 &2156181409654977282
 BoxCollider2D:
   m_ObjectHideFlags: 0
