@@ -33,11 +33,6 @@ public class CameraController : Singleton<CameraController>
         if (currentX > lastX) faceLeft = false; else if (currentX < lastX) faceLeft = true;
         lastX = Mathf.RoundToInt(Player.position.x);
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            _offset.y -= 6;
-        }
-
         Vector3 target;
         //Đặt toàn bộ targer.z vè -10 để đảm bảo camera k bị che lấp
         if (Player.transform.position.x < _minX)

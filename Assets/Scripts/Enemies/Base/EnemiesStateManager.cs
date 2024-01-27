@@ -94,7 +94,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
         PlayerCheck();
     }
 
-    public virtual void OnCollisionEnter2D(Collision2D other)
+    protected virtual void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Trap"))
         {
@@ -102,12 +102,18 @@ public abstract class EnemiesStateManager : MonoBehaviour
         }
     }
 
-    public virtual void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Hat") || other.CompareTag("Stomp"))
         {
             GotHit();
         }
+    }
+
+    protected void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Stomp"))
+            GotHit();
     }
 
     public abstract void GotHit();
