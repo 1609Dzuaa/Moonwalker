@@ -89,6 +89,7 @@ public class PlayerStateManager : MonoBehaviour
         _dirX = Input.GetAxisRaw("Horizontal");
         _state.UpdateState();
         GroundCheck();
+        BlockIfOutOfMinBoundary();
         HandleFlipSprite();
         //Debug.Log("R: " + _isFacingRight);
     }
@@ -156,5 +157,11 @@ public class PlayerStateManager : MonoBehaviour
     private void AllowUpdateFootAttack()
     {
         _stompAttack._allowUpdate = true;
+    }
+
+    private void BlockIfOutOfMinBoundary()
+    {
+        if (transform.position.x <= -19.75f)
+            transform.position = new Vector3(-19.75f, transform.position.y, transform.position.z);
     }
 }
