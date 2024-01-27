@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class EnemiesGotHitState : EnemiesBaseState
@@ -19,8 +21,8 @@ public class EnemiesGotHitState : EnemiesBaseState
         if (enemy.Health < 0)
         {
             enemy.Col.isTrigger = true;
+            enemy.Rb.velocity = new UnityEngine.Vector2(0f, 3f);
             enemy.Anim.SetTrigger("Death");
-            enemy.Rb.AddForce(Vector2.up * 3f, ForceMode2D.Impulse);
             enemy.EnemiesDeath();
         }
         else
@@ -37,6 +39,5 @@ public class EnemiesGotHitState : EnemiesBaseState
     public override void UpdateState()
     {
         CheckSwitchState();
-        enemy.Rb.velocity = new Vector2(enemy.WalkSpeed * enemy.RaycastDirX , enemy.Rb.velocity.y); 
     }
 }
