@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flipObject: 1
-  _walkSpeed: 7
+  _walkSpeed: 10
   _health: 0
-  _distance: 5
+  _distance: 16
   _angleRaycast: 0
   _ignoreLayerSelf:
     serializedVersion: 2
