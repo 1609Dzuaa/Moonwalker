@@ -506,6 +506,8 @@ MonoBehaviour:
     _audioClip: {fileID: 8300000, guid: b18e40592e2315a4099ae9e0ff2fea72, type: 3}
   - _name: 5
     _audioClip: {fileID: 8300000, guid: bd78be692fb841444907d1b39c9acd16, type: 3}
+  - _name: 6
+    _audioClip: {fileID: 8300000, guid: e1af7445d46588446a18eb47018a2931, type: 3}
   musicSounds:
   - _name: 1
     _audioClip: {fileID: 8300000, guid: c00be438ec5f9ce4cbd7648ca41c7e84, type: 3}

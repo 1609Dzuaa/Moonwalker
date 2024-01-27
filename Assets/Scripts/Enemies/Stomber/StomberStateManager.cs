@@ -26,4 +26,9 @@ public class StomberStateManager : EnemiesStateManager
         }
     }
 
+    public void Bonk()
+    {
+        SoundsManager.Instant.PlaySFX(GameEnums.ESoundName.BonkSfx);
+    }
+
 }
