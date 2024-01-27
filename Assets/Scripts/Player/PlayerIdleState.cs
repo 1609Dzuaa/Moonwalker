@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class PlayerIdleState : PlayerBaseState
@@ -7,6 +8,7 @@ public class PlayerIdleState : PlayerBaseState
     public override void EnterState(PlayerStateManager playerStateManager)
     {
         base.EnterState(playerStateManager);
+        playerStateManager.Rigidbody2D.velocity = new Vector2(0f, _playerStateManager.Rigidbody2D.velocity.y);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.idle);
         //Debug.Log("tao la idle");
     }

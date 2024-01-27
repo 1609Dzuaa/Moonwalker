@@ -11,6 +11,8 @@ public class GunnerAttackState : EnemiesAttackState
     public override void EnterState()
     {
         base.EnterState();
+        enemy.Rb.velocity = new Vector2(0f, enemy.Rb.velocity.y);
+        Debug.Log("Bắn bỏ mọe");
     }
 
     public override void UpdateState()

@@ -12,6 +12,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
     private SpriteRenderer _sprite;
     private Rigidbody2D _rb;
     private Animator _anim;
+    private float _delayTimeShoot = 3f;
 
     private PlayerStateManager _player;
     [SerializeField] private bool _flipObject = false;
@@ -67,6 +68,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
     public PlayerStateManager Player { get => _player; set => _player = value; }
     public float PlusXBullet { get => _plusXBullet; set => _plusXBullet = value; }
     public float PlusYBullet { get => _plusYBullet; set => _plusYBullet = value; }
+    public float DelayTimeShoot { get => _delayTimeShoot; set => _delayTimeShoot = value; }
 
     public virtual void Awake()
     {
