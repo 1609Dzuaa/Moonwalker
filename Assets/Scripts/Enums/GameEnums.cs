@@ -5,7 +5,7 @@ using UnityEngine;
 public static class GameEnums 
 {
     public enum EPlayerState
-    { idle, walk, jump, hatAttack, stompAttack }
+    { idle, walk, jump, hatAttack, stompAttack, gotHit }
 
     public enum EEnemiesState
     {idle, walk, attack, gothit}
