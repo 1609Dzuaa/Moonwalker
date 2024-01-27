@@ -21,7 +21,7 @@ public class EnemiesGotHitState : EnemiesBaseState
         if (enemy.Health < 0)
         {
             enemy.Col.isTrigger = true;
-            enemy.Rb.velocity = new UnityEngine.Vector2(0f, 3f);
+            enemy.Rb.velocity = new UnityEngine.Vector2(0f, 0f);
             enemy.Anim.SetTrigger("Death");
             enemy.EnemiesDeath();
         }
