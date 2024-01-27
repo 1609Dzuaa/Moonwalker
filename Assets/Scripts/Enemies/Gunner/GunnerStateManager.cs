@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GunnerStateManager : EnemiesStateManager
 {
+    [SerializeField] private Transform _bulletPosition;
     public override void Start()
     {
         CurrentState = State.GunnerIdle();
@@ -13,7 +14,7 @@ public class GunnerStateManager : EnemiesStateManager
 
     public void Shoot()
     {
-        ObjectPooler.Instant.GetPoolObject("Bullet", transform.position, Quaternion.identity);
+        ObjectPooler.Instant.GetPoolObject("Bullet", _bulletPosition.transform.position, Quaternion.identity);
     }
 
     public void SwitchToIdleState()
