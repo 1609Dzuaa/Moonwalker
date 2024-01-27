@@ -136,7 +136,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
     {
         if (RaycastGround.collider != null && RaycastGround.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            Debug.Log("SeeGround");
+            //Debug.Log("SeeGround");
             Debug.DrawLine(transform.position, RaycastGround.point, Color.white);
             SeeGround = true;
         }

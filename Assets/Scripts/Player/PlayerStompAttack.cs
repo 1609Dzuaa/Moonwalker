@@ -9,24 +9,26 @@ public class PlayerStompAttack : PlayerBaseState
     public override void EnterState(PlayerStateManager playerStateManager)
     {
         base.EnterState(playerStateManager);
-        _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.footAttack);
-        _playerStateManager.GetStomp().SetActive(true);
-        Debug.Log("tao la F Attack");
+        _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.stompAttack);
+        Debug.Log("tao la S Attack");
     }
 
     public override void ExitState()
     {
         _allowUpdate = false;
-        _playerStateManager.GetStomp().SetActive(false);
     }
 
     public override void UpdateState()
     {
         if (_allowUpdate)
+        {
             if (_playerStateManager.DirX != 0 && _playerStateManager.DetectedGround)
                 _playerStateManager.ChangeState(_playerStateManager.GetWalkState());
             else if (_playerStateManager.DirX == 0 && _playerStateManager.DetectedGround)
                 _playerStateManager.ChangeState(_playerStateManager.GetIdleState());
+            else if (Input.GetKeyDown(KeyCode.J) && _playerStateManager.CanThrowHat)
+                _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
+        }
     }
 
     public override void FixedUpdateState()
