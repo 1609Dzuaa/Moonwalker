@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class PlayerStateManager : MonoBehaviour
@@ -73,7 +74,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         _state = _idle;
         _state.EnterState(this);
-        EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBackToPlayer, HatBack);
+        EventsManager.Instant.SubcribeToAnEvent(GameEnums.EEvents.HatOnBackToPlayer, HatBack);
     }
 
     // Update is called once per frame
@@ -132,7 +133,7 @@ public class PlayerStateManager : MonoBehaviour
     private void InvokeHatFunction()
     {
         HatInfo info = new HatInfo(_hatPosition.transform.position, _isFacingRight);
-        EventsManager.Instance.NotifyObservers(GameEnums.EEvents.HatOnBeingThrew, info);
+        EventsManager.Instant.NotifyObservers(GameEnums.EEvents.HatOnBeingThrew, info);
         _canThrowHat = false;
     }
 

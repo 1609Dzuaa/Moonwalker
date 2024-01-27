@@ -23,19 +23,19 @@ public class HatController : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
+        EventsManager.Instant.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
         gameObject.SetActive(false);
     }
 
     private void OnEnable()
     {
         //if (EventsManager.Instance._dictEvents.ContainsKey(GameEnums.EEvents.HatOnBeingThrew))
-            //EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
+        //EventsManager.Instant.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
     }
 
     private void OnDisable()
     {
-        //EventsManager.Instance.UnSubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
+        //EventsManager.Instant.UnSubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
     }
 
     // Update is called once per frame
@@ -72,7 +72,7 @@ public class HatController : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            EventsManager.Instance.NotifyObservers(GameEnums.EEvents.HatOnBackToPlayer, null);
+            EventsManager.Instant.NotifyObservers(GameEnums.EEvents.HatOnBackToPlayer, null);
         }
     }
 }
