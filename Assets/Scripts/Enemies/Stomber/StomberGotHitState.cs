@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StomberGotHitState : MonoBehaviour
+public class StomberGotHitState : EnemiesGotHitState
 {
-    // Start is called before the first frame update
-    void Start()
+    public StomberGotHitState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

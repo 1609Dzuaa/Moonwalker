@@ -46,6 +46,10 @@ public class EnemiesStateFactory : MonoBehaviour
     {
         return new StomberAttackState(_context, this);
     }
+    public EnemiesBaseState StomberGotHit()
+    {
+        return new StomberGotHitState(_context, this);
+    }
     
     //Gunner
     public EnemiesBaseState GunnerIdle()
