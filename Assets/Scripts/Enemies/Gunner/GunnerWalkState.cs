@@ -11,11 +11,14 @@ public class GunnerWalkState : EnemiesWalkState
     public override void EnterState()
     {
         base.EnterState();
+        enemy.StartCoroutine(SwitchToAttackState());
     }
 
     public override void UpdateState()
     {
-        base.UpdateState();
+        CheckSwitchState();
+        float dirX = Input.GetAxisRaw("Horizontal");
+        enemy.Rb.velocity = new Vector2(- enemy.WalkSpeed * dirX , enemy.Rb.velocity.y);
     }
 
     public override void CheckSwitchState()
@@ -26,5 +29,11 @@ public class GunnerWalkState : EnemiesWalkState
     public override void ExitState()
     {
         base.ExitState();
+    }
+
+    private IEnumerator SwitchToAttackState()
+    {
+        yield return new WaitForSeconds(enemy.DelayTimeShoot);
+        SwitchState(factory.GunnerAttack());
     }
 }
