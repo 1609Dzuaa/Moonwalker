@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StomberStateManager : MonoBehaviour
+public class StomberStateManager : EnemiesStateManager
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-        
+        CurrentState = State.StomberIdle();
+        CurrentState.EnterState();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void GotHit()
     {
-        
+
     }
+
 }

@@ -25,5 +25,24 @@ public class EnemiesStateFactory : MonoBehaviour
     {
         return new BommanAttackState(_context, this);
     }
+
+    //Stomber
+    public EnemiesBaseState StomberIdle()
+    {
+        return new StomberIdleState(_context, this);
+    }
+    public EnemiesBaseState StomberWalk()
+    {
+        return new StomberWalkState(_context, this);
+    }
+    public EnemiesBaseState StomberRun()
+    {
+        return new StomberRunState(_context, this);
+    }
+    public EnemiesBaseState StomberAttack()
+    {
+        return new StomberAttackState(_context, this);
+    }
+
     
 }
