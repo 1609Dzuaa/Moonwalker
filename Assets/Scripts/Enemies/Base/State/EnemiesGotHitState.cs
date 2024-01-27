@@ -20,8 +20,7 @@ public class EnemiesGotHitState : EnemiesBaseState
         {
             enemy.Col.isTrigger = true;
             enemy.Anim.SetTrigger("Death");
-            enemy.Rb.gravityScale = 10f;
-            enemy.Rb.AddForce(Vector2.up * 20f, ForceMode2D.Impulse);
+            enemy.Rb.AddForce(Vector2.up * 3f, ForceMode2D.Impulse);
             enemy.EnemiesDeath();
         }
         else
