@@ -33,5 +33,6 @@ public class PlayerStompAttack : PlayerBaseState
 
     public override void FixedUpdateState()
     {
+        _playerStateManager.Rigidbody2D.velocity = new Vector2(_playerStateManager.DirX * -.6f * _playerStateManager.MovementSpeed, _playerStateManager.Rigidbody2D.velocity.y);
     }
 }

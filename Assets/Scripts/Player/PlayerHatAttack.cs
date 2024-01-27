@@ -11,6 +11,7 @@ public class PlayerHatAttack : PlayerBaseState
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.hatAttack);
         //Debug.Log("tao la H Attack");
+        SoundsManager.Instant.PlaySFX(GameEnums.ESoundName.HatSfx);
     }
 
     public override void ExitState()

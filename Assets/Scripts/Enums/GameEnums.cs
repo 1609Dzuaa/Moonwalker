@@ -21,7 +21,9 @@ public static class GameEnums
         StartScreen,
         Theme,
         OuchSfx,
-        StompSfx
+        StompSfx,
+        JumpSfx,
+        HatSfx,
     }
 
 }
