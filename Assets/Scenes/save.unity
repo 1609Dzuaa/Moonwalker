@@ -1343,9 +1343,12 @@ MonoBehaviour:
   pools:
   - tag: Egg
     prefab: {fileID: 5186761678086113689, guid: 02fd46ad13bfafd4daca50d85eed6fd7, type: 3}
-    size: 15
+    size: 5
   - tag: Bullet
     prefab: {fileID: 8347385773057012066, guid: b44aa9a5a42223e49949fc6765ec13d1, type: 3}
+    size: 5
+  - tag: EggPiece
+    prefab: {fileID: 6146662904119540623, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
     size: 5
 --- !u!4 &1178670821
 Transform:
@@ -2570,60 +2573,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987acf50aae83e34390c55bbaa6aae1e, type: 3}
---- !u!1001 &6146662902899188042
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -23.427927
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.018564
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.10602628
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540620, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6146662904119540623, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
-      propertyPath: m_Name
-      value: EggPiece
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a656095290ee57344ad3aa430edafe7d, type: 3}
