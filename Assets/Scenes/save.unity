@@ -319,6 +319,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2457678538326584897, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457678538326584899, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
+      propertyPath: _dustEffect
+      value: 
+      objectReference: {fileID: 2056856686}
+    - target: {fileID: 2457678538326584899, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
+      propertyPath: _dustEffectWalk
+      value: 
+      objectReference: {fileID: 1113865895}
     - target: {fileID: 2457678538326584926, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1189,6 +1201,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!198 &1113865895 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 185051407359680161, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
+  m_PrefabInstance: {fileID: 122700379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1119197742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2262,6 +2279,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!198 &2056856686 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5259327639233190287, guid: 6655a57980391ba41bc7b539114143d6, type: 3}
+  m_PrefabInstance: {fileID: 122700379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2062017206
 PrefabInstance:
   m_ObjectHideFlags: 0

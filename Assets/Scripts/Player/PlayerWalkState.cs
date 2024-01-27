@@ -9,16 +9,18 @@ public class PlayerWalkState : PlayerBaseState
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.walk);
         //Debug.Log("tao la walk");
+        _playerStateManager.DustEffect.Play();
+        _playerStateManager.DustEffectWalk.Play();
     }
 
     public override void ExitState()
     {
-
+        _playerStateManager.DustEffectWalk.Stop();
     }
 
     public override void UpdateState()
     {
-        if(_playerStateManager.DirX == 0)
+        if (_playerStateManager.DirX == 0)
             _playerStateManager.ChangeState(_playerStateManager.GetIdleState());
         else if (Input.GetButtonDown("Jump") && _playerStateManager.DetectedGround)
             _playerStateManager.ChangeState(_playerStateManager.GetJumpState());
