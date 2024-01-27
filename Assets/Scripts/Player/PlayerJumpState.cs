@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerBaseState
 {
+    public bool _allowUpdate;
+
     public override void EnterState(PlayerStateManager playerStateManager)
     {
         base.EnterState(playerStateManager);
@@ -14,21 +16,22 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void ExitState()
     {
-        base.ExitState();
+        _allowUpdate = false;
     }
 
     public override void UpdateState()
     {
-        if (_playerStateManager.Rigidbody2D.velocity.y < -0.1f)
-            _playerStateManager.ChangeState(_playerStateManager.GetFallState());
-        else if (Input.GetKeyDown(KeyCode.E) && _playerStateManager.CanThrowHat)
-            _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
+        if (_allowUpdate)
+            if (_playerStateManager.DirX != 0 && _playerStateManager.DetectedGround)
+                _playerStateManager.ChangeState(_playerStateManager.GetWalkState());
+            else if (_playerStateManager.DirX == 0 && _playerStateManager.DetectedGround)
+                _playerStateManager.ChangeState(_playerStateManager.GetIdleState());
     }
 
     public override void FixedUpdateState()
     {
         if (_playerStateManager.DirX != 0)
-            _playerStateManager.Rigidbody2D.velocity = new Vector2(_playerStateManager.MovementSpeed * _playerStateManager.DirX, _playerStateManager.Rigidbody2D.velocity.y);
+            _playerStateManager.Rigidbody2D.velocity = new Vector2(_playerStateManager.MovementSpeed * _playerStateManager.DirX * -1, _playerStateManager.Rigidbody2D.velocity.y);
     }
 
     private void Jump()
