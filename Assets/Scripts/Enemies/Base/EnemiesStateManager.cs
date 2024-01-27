@@ -102,7 +102,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if ((other.gameObject.name == "Player")|| other.gameObject.CompareTag("Hat"))
         {
             GotHit();
         }
@@ -134,7 +134,7 @@ public abstract class EnemiesStateManager : MonoBehaviour
     }
     public virtual void RaycastCheckGround()
     {
-        if (RaycastGround.collider != null && RaycastGround.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        if (RaycastGround.collider != null && RaycastGround.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             Debug.Log("SeeGround");
             Debug.DrawLine(transform.position, RaycastGround.point, Color.white);

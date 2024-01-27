@@ -43,6 +43,4 @@ public class EnemiesStateFactory : MonoBehaviour
     {
         return new StomberAttackState(_context, this);
     }
-
-    
 }

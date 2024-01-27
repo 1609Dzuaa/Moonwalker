@@ -15,4 +15,12 @@ public class StomberStateManager : EnemiesStateManager
 
     }
 
+    public void Attack()
+    {
+        if(SeeGround)
+        {
+            //Player GotHit
+        }
+    }
+
 }
