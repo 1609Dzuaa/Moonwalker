@@ -9,7 +9,7 @@ public class PlayerJumpState : PlayerBaseState
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.jump);
         Jump();
-        Debug.Log("tao la Jump");
+        //Debug.Log("tao la Jump");
     }
 
     public override void ExitState()
@@ -21,7 +21,7 @@ public class PlayerJumpState : PlayerBaseState
     {
         if (_playerStateManager.Rigidbody2D.velocity.y < -0.1f)
             _playerStateManager.ChangeState(_playerStateManager.GetFallState());
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) && _playerStateManager.CanThrowHat)
             _playerStateManager.ChangeState(_playerStateManager.GetHatAttack());
     }
 
