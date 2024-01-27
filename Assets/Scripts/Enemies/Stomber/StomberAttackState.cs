@@ -7,27 +7,22 @@ public class StomberAttackState : EnemiesAttackState
     public StomberAttackState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
     }
-
-    private bool _called;
     private IEnumerator enumerator;
 
     public override void EnterState()
     {
         base.EnterState();
         Debug.Log("xieen");
+
+        enumerator = SwitchToIdleState();
+        enemy.StartCoroutine(enumerator);
     }
 
     public override void UpdateState()
     {
         base.UpdateState();
         Debug.Log("xieen");
-
-        if(!enemy.SeePlayer && !_called)
-        {
-            _called = true;
-            enumerator = SwitchToIdleState();
-            enemy.StartCoroutine(enumerator);
-        }
+        enemy.Rb.velocity = new Vector2(enemy.WalkSpeed * enemy.RaycastDirX , enemy.Rb.velocity.y);
     }
 
     public override void CheckSwitchState()

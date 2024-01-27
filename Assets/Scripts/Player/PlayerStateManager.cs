@@ -12,6 +12,8 @@ public class PlayerStateManager : MonoBehaviour
     [SerializeField] Transform _groundCheck;
     [SerializeField] Transform _hatPosition;
     [SerializeField] GameObject _stomp;
+    [SerializeField] ParticleSystem _dustEffect;
+    [SerializeField] ParticleSystem _dustEffectWalk;
 
     Animator _anim;
     Rigidbody2D _rb;
@@ -46,6 +48,8 @@ public class PlayerStateManager : MonoBehaviour
     public Animator Animator { get => _anim; }
 
     public Rigidbody2D Rigidbody2D { get => _rb; set => _rb = value; }
+    public ParticleSystem DustEffect { get => _dustEffect; set => _dustEffect = value; }
+    public ParticleSystem DustEffectWalk { get => _dustEffectWalk; set => _dustEffectWalk = value; }
 
     public PlayerIdleState GetIdleState() => _idle;
 
