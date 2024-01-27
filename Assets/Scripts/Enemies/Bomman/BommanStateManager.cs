@@ -25,9 +25,4 @@ public class BommanStateManager : EnemiesStateManager
     {
         ObjectPooler.Instant.GetPoolObject("Egg", transform.position, Quaternion.identity);
     }
-
-    public override void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-    }
 }

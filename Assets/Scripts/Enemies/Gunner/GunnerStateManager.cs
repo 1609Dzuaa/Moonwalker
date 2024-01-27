@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class GunnerStateManager : EnemiesStateManager
 {
-    public override void GotHit()
-    {
-
-    }
-
     public override void Start()
     {
         CurrentState = State.GunnerIdle();
@@ -30,5 +25,13 @@ public class GunnerStateManager : EnemiesStateManager
     public override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
+    }
+
+    
+    public override void GotHit()
+    {
+        CurrentState.ExitState();
+        CurrentState = State.GunnerGotHit();
+        CurrentState.EnterState();
     }
 }
