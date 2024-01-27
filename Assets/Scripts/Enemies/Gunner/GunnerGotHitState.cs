@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunnerGotHitState : MonoBehaviour
+public class GunnerGotHitState : EnemiesGotHitState
 {
-    // Start is called before the first frame update
-    void Start()
+    public GunnerGotHitState(EnemiesStateManager currentContext, EnemiesStateFactory currentState) : base(currentContext, currentState)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
