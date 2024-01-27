@@ -11,6 +11,7 @@ public class GunnerStateManager : EnemiesStateManager
 
     public override void Start()
     {
-
+        CurrentState = State.GunnerIdle();
+        CurrentState.EnterState();
     }
 }
