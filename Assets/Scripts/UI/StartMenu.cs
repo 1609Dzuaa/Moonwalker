@@ -22,5 +22,11 @@ public class StartMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        UIManager.Instant.PopDownLoosePanel();
+    }
+
 
 }
