@@ -9,16 +9,16 @@ public class Egg : MonoBehaviour
     private Rigidbody2D rb;
     float _entryTime;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector2.left*_force, ForceMode2D.Impulse);
-        rb.AddForce(Vector2.up * _force, ForceMode2D.Impulse);
     }
 
     private void OnEnable()
     {
         _entryTime = Time.time;
+        rb.AddForce(Vector2.left * _force, ForceMode2D.Impulse);
+        rb.AddForce(Vector2.up * _force, ForceMode2D.Impulse);
     }
 
     void Update()
@@ -27,11 +27,22 @@ public class Egg : MonoBehaviour
             gameObject.SetActive(false);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
 
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ObjectPooler.Instant.GetPoolObject("EggPiece", transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+        }
+    }
+
+
 }
