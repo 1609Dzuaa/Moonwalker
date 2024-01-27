@@ -19,6 +19,7 @@ public class HatController : MonoBehaviour
     float _entryTime;
     bool _hasBack;
     bool _isRight;
+    bool _hasActive;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +31,7 @@ public class HatController : MonoBehaviour
 
     private void OnEnable()
     {
-        //if (EventsManager.Instance._dictEvents.ContainsKey(GameEnums.EEvents.HatOnBeingThrew))
-        //EventsManager.Instant.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
+        _hasActive = false;
     }
 
     private void OnDisable()
@@ -48,8 +48,11 @@ public class HatController : MonoBehaviour
             _hasBack = true;
         }
 
-        if (Time.time - _entryTime >= _hatMaxTime)
+        if (Time.time - _entryTime >= _hatMaxTime && !_hasActive)
+        {
+            _hasActive = true;
             gameObject.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
