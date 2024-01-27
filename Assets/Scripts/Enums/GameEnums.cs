@@ -18,9 +18,9 @@ public static class GameEnums
 
     public enum ESoundName
     {
+        StartScreen,
         Theme,
         OuchSfx,
-
     }
 
 }
