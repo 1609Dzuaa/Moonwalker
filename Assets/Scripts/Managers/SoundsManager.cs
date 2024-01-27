@@ -36,7 +36,7 @@ public class SoundsManager : Singleton<SoundsManager>
 
     public void PlaySFX(ESoundName name)
     {
-        Sound s = Array.Find(musicSounds, x => x._name == name);
+        Sound s = Array.Find(sfxSounds, x => x._name == name);
 
         if (s == null)
             Debug.Log("Sound Not Found");
