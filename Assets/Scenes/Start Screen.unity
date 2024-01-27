@@ -500,6 +500,8 @@ MonoBehaviour:
   sfxSounds:
   - _name: 2
     _audioClip: {fileID: 8300000, guid: 2a6b14d4be6645c42a8595052ac92840, type: 3}
+  - _name: 3
+    _audioClip: {fileID: 8300000, guid: cd99f796844f06d4484fdeba8f0837b2, type: 3}
   musicSounds:
   - _name: 0
     _audioClip: {fileID: 8300000, guid: aaa1663eb55b65c44a6382423fef98db, type: 3}
