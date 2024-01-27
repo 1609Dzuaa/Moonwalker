@@ -11,11 +11,13 @@ public class StomberAttackState : EnemiesAttackState
     public override void EnterState()
     {
         base.EnterState();
+        Debug.Log("xieen");
     }
 
     public override void UpdateState()
     {
         base.UpdateState();
+        Debug.Log("xieen");
     }
 
     public override void CheckSwitchState()

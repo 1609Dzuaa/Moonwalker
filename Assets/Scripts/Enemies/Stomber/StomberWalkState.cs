@@ -26,6 +26,12 @@ public class StomberWalkState : EnemiesWalkState
     public override void CheckSwitchState()
     {
         base.CheckSwitchState();
+        if (enemy.SeePlayer)
+        {
+            enemy.StopCoroutine(enumerator);
+            enumerator = null;
+            SwitchState(factory.StomberRun());
+        }
     }
 
     public override void ExitState()
