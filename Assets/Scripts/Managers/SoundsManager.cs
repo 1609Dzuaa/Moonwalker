@@ -18,7 +18,7 @@ public class SoundsManager : Singleton<SoundsManager>
 
     private void Start()
     {
-        PlayMusic(ESoundName.Theme);
+        PlayMusic(ESoundName.StartScreen);
     }
 
     public void PlayMusic(ESoundName soundName)

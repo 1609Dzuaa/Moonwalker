@@ -14,6 +14,7 @@ public class StartMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SoundsManager.Instant.PlayMusic(GameEnums.ESoundName.Theme);
     }
 
     public void EndGame()
