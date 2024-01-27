@@ -19,7 +19,6 @@ public class PlayerStateManager : MonoBehaviour
     bool _detectedGround;
     bool _isFacingRight;
     bool _canThrowHat = true;
-    bool _canStomp = true;
 
     #region States
 
@@ -56,9 +55,7 @@ public class PlayerStateManager : MonoBehaviour
 
     public PlayerHatAttack GetHatAttack() => _hatAttack;
 
-    public PlayerStompAttack GetStompAttack() => _stompAttack;
-
-    public GameObject GetStomp() => _stomp;
+    public PlayerStompAttack GetStompAttack() => _stompAttack;  
 
     private void Awake()
     {
@@ -159,11 +156,17 @@ public class PlayerStateManager : MonoBehaviour
     private void AllowUpdateStompAttack()
     {
         _stompAttack._allowUpdate = true;
+        _stomp.SetActive(false);
     }
 
     private void BlockIfOutOfMinBoundary()
     {
         if (transform.position.x <= -19.75f)
             transform.position = new Vector3(-19.75f, transform.position.y, transform.position.z);
+    }
+
+    private void CanDamageEnemies()
+    {
+        _stomp.SetActive(true);
     }
 }
