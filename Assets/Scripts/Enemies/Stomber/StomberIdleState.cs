@@ -14,7 +14,7 @@ public class StomberIdleState : EnemiesIdleState
     {
         base.EnterState();
         enemy.FlipXObject();
-        Debug.Log("Stomber Idle");
+        //Debug.Log("Stomber Idle");
         enumerator =  SwitchToWalkState();
         enemy.StartCoroutine(enumerator);
     }
