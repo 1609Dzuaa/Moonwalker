@@ -13,7 +13,7 @@ public class StomberWalkState : EnemiesWalkState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Stomber Walk");
+        //Debug.Log("Stomber Walk");
         enumerator = SwitchToIdleState();
         enemy.StartCoroutine(enumerator);
     }
@@ -42,7 +42,7 @@ public class StomberWalkState : EnemiesWalkState
     private IEnumerator SwitchToIdleState()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("Switch to idle");
+        //Debug.Log("Switch to idle");
         SwitchState(factory.StomberIdle());
     }
 }
