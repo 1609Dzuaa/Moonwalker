@@ -16,4 +16,11 @@ public static class GameEnums
         HatOnBackToPlayer
     }
 
+    public enum ESoundName
+    {
+        Theme,
+        OuchSfx,
+
+    }
+
 }

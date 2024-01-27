@@ -16,7 +16,7 @@ public class GunnerIdleState : EnemiesIdleState
     public override void UpdateState()
     {
         base.UpdateState();
-        Debug.Log("Gunner Idle");
+        //Debug.Log("Gunner Idle");
     }
 
     public override void CheckSwitchState()
