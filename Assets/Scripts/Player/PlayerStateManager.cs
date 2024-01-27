@@ -63,11 +63,6 @@ public class PlayerStateManager : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable()
-    {
-        EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBackToPlayer, HatBack);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +73,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         _state = _idle;
         _state.EnterState(this);
+        EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBackToPlayer, HatBack);
     }
 
     // Update is called once per frame
