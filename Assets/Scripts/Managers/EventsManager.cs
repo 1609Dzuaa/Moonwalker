@@ -6,7 +6,7 @@ using UnityEngine;
 public class EventsManager : MonoBehaviour
 {
     private static EventsManager _instance;
-    private Dictionary<GameEnums.EEvents, Action<object>> _dictEvents = new();
+    public Dictionary<GameEnums.EEvents, Action<object>> _dictEvents = new();
     //Thêm sẵn các Action tương ứng với Event trong EnumEvents tại đây
     private Action<object> HatOnBeingThrew;
     private Action<object> HatOnBackToPlayer;

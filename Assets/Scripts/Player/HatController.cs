@@ -29,12 +29,13 @@ public class HatController : MonoBehaviour
 
     private void OnEnable()
     {
-        EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
+        //if (EventsManager.Instance._dictEvents.ContainsKey(GameEnums.EEvents.HatOnBeingThrew))
+            //EventsManager.Instance.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
     }
 
     private void OnDisable()
     {
-        EventsManager.Instance.UnSubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
+        //EventsManager.Instance.UnSubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
     }
 
     // Update is called once per frame
