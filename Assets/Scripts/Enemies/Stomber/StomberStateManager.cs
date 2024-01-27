@@ -12,7 +12,9 @@ public class StomberStateManager : EnemiesStateManager
 
     public override void GotHit()
     {
-
+        CurrentState.ExitState();
+        CurrentState = State.StomberGotHit();
+        CurrentState.EnterState();
     }
 
     public void Attack()
