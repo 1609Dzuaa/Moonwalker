@@ -115,7 +115,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bonk_attack_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 6
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce4f4e1586225c4b84dec15b0eb5f74
+      internalID: 724222924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bonk_attack_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 6
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dd64e45bff1424b89b2f6615e9626e
+      internalID: -1416836046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bonk_attack_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 6
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f824be5dd6dfe041b263bf26131b555
+      internalID: 1958854888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bonk_attack_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 6
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ad9a2a7f1364e4aa35cdc85fa3ab98
+      internalID: 979026904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bonk_attack_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 6
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882c1122762809e4eab212ba07cb7464
+      internalID: 409165177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bonk_attack_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 6
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ed35cb73bf21e42afbb35fa8a893f4
+      internalID: 297429642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +252,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bonk_attack_sheet_3: 979026904
+      bonk_attack_sheet_0: 724222924
+      bonk_attack_sheet_4: 409165177
+      bonk_attack_sheet_1: -1416836046
+      bonk_attack_sheet_2: 1958854888
+      bonk_attack_sheet_5: 297429642
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
