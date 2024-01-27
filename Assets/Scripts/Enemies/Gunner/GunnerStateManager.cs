@@ -14,6 +14,7 @@ public class GunnerStateManager : EnemiesStateManager
 
     public void Shoot()
     {
+        SoundsManager.Instant.PlaySFX(GameEnums.ESoundName.ShootSfx);
         ObjectPooler.Instant.GetPoolObject("Bullet", _bulletPosition.transform.position, Quaternion.identity);
     }
 
