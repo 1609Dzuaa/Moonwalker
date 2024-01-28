@@ -26,7 +26,9 @@ public class TimeCountController : Singleton<TimeCountController>
     // Update is called once per frame
     void Update()
     {
-        if (!_hasPop)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+            return; 
+        if (!_hasPop && _timeText)
         {
             _elapsedTime += Time.deltaTime;
 
