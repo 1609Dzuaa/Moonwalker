@@ -40,7 +40,6 @@ public class TimeCountController : Singleton<TimeCountController>
                 {
                     _hasPop = true;
                     UIManager.Instant.PopUpLoosePanel();
-                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
             }
         }
