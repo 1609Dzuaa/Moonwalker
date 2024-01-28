@@ -9,6 +9,8 @@ TagManager:
   - Hat
   - Stomp
   - Ground
+  - Loser
+  - Winner
   layers:
   - Default
   - TransparentFX
