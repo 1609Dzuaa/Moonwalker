@@ -13,6 +13,9 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
+        TimeCountController.Instant._elapsedTime = 0;
+        UIManager.Instant.PopDownLoosePanel();
+        UIManager.Instant.PopDownWinPanel();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SoundsManager.Instant.PlayMusic(GameEnums.ESoundName.Theme);
     }
@@ -32,6 +35,8 @@ public class StartMenu : MonoBehaviour
 
     public void ReloadScene()
     {
+        UIManager.Instant.PopDownLoosePanel();
+        UIManager.Instant.PopDownWinPanel();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         UIManager.Instant.PopDownLoosePanel();
     }

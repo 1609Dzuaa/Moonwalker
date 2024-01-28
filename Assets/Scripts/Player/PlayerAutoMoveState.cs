@@ -9,6 +9,7 @@ public class PlayerAutoMoveState : PlayerBaseState
         base.EnterState(playerStateManager);
         _playerStateManager.Animator.SetInteger("State", (int)GameEnums.EPlayerState.walk);
         CameraController.Instant.PlayerRef = null;
+        UIManager.Instant.StartCoroutine(UIManager.Instant.PopUpWinPanel());
     }
 
     public override void ExitState()

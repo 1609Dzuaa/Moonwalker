@@ -20,29 +20,39 @@ public class UIManager : Singleton<UIManager>
     {
         _loosePanel = GameObject.FindWithTag("Loser");
         _winPanel = GameObject.FindWithTag("Winner");
-        _loosePanel.SetActive(false);
-        _winPanel.SetActive(false);
+        if (_loosePanel)
+            _loosePanel.SetActive(false);
+        if (_winPanel)
+            _winPanel.SetActive(false);
     }
 
     public void PopUpLoosePanel()
     {
-        _loosePanel.SetActive(true);
-    }
+        if (_winPanel.activeInHierarchy)
+            return;
 
-    public void PopUpWinPanel()
-    {
-        _winPanel.SetActive(true);
+        _loosePanel.SetActive(true);
     }
 
     public void PopDownLoosePanel()
     {
-        _loosePanel.SetActive(false);
+        if (_loosePanel)
+            _loosePanel.SetActive(false);
         TimeCountController.Instant._hasPop = false;
         TimeCountController.Instant._elapsedTime = 0;
     }
 
     public void PopDownWinPanel()
     {
-        _winPanel.SetActive(false);
+        if (_winPanel)
+            _winPanel.SetActive(false);
     }
+
+    public IEnumerator PopUpWinPanel()
+    {
+        yield return new WaitForSeconds(_delaySpawnWinPanel);
+
+        _winPanel.SetActive(true);
+    }
+
 }
