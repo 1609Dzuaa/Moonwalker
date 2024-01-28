@@ -32,6 +32,7 @@ public class UIManager : Singleton<UIManager>
             return;
 
         _loosePanel.SetActive(true);
+        SoundsManager.Instant.PlaySFX(GameEnums.ESoundName.OuchSfx);
     }
 
     public void PopDownLoosePanel()
@@ -53,6 +54,7 @@ public class UIManager : Singleton<UIManager>
         yield return new WaitForSeconds(_delaySpawnWinPanel);
 
         _winPanel.SetActive(true);
+        SoundsManager.Instant.PlaySFX(GameEnums.ESoundName.WinGameSfx);
     }
 
 }
