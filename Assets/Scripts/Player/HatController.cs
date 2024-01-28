@@ -21,6 +21,8 @@ public class HatController : MonoBehaviour
     bool _isRight;
     bool _hasActive;
 
+    private IEnumerator enumerator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,8 @@ public class HatController : MonoBehaviour
     private void OnEnable()
     {
         _hasActive = false;
+        enumerator = ReturnHat();
+        StartCoroutine(enumerator);
     }
 
     private void OnDisable()
@@ -47,6 +51,8 @@ public class HatController : MonoBehaviour
             _speed = -_speed;
             _hasBack = true;
         }
+
+
     }
 
     private void FixedUpdate()
@@ -70,10 +76,19 @@ public class HatController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             gameObject.SetActive(false);
+            StopCoroutine(enumerator);
+            enumerator = null;
             EventsManager.Instant.NotifyObservers(GameEnums.EEvents.HatOnBackToPlayer, null);
         }
+    }
+
+    private IEnumerator ReturnHat()
+    {
+        yield return new WaitForSeconds(_hatMaxTime);
+        gameObject.SetActive(false);
+        EventsManager.Instant.NotifyObservers(GameEnums.EEvents.HatOnBackToPlayer, null);
     }
 }
