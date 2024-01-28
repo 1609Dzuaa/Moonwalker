@@ -29,6 +29,7 @@ public class HatController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         EventsManager.Instant.SubcribeToAnEvent(GameEnums.EEvents.HatOnBeingThrew, Enable);
         gameObject.SetActive(false);
+        DontDestroyOnLoad(gameObject);
     }
 
     private void OnEnable()

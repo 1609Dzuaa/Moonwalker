@@ -17,6 +17,14 @@ public class StartMenu : MonoBehaviour
         SoundsManager.Instant.PlayMusic(GameEnums.ESoundName.Theme);
     }
 
+    public void ReturnHome()
+    {
+        SceneManager.LoadScene(0);
+        UIManager.Instant.PopDownLoosePanel();
+        UIManager.Instant.PopDownWinPanel();
+        SoundsManager.Instant.PlayMusic(GameEnums.ESoundName.StartScreen);
+    }
+
     public void EndGame()
     {
         Application.Quit();
