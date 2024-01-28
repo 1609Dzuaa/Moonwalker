@@ -126,6 +126,10 @@ public class PlayerStateManager : MonoBehaviour
     {
         if (collision.CompareTag("Enemies"))
             ChangeState(GotHit);
+        else if(collision.CompareTag("Finish"))
+        {
+            Debug.Log("Trigger Finish");
+        }
     }
 
     private void HandleFlipSprite()

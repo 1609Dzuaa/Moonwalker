@@ -12,17 +12,17 @@ public class TimeCountController : Singleton<TimeCountController>
     public bool _hasPop;
     public float _elapsedTime = 0;
 
-    public override void Awake()
-    {
-        base.Awake();
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
         _hasPop = false;
     }
 
+
+    public override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {

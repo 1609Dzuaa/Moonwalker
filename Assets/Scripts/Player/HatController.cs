@@ -47,12 +47,6 @@ public class HatController : MonoBehaviour
             _speed = -_speed;
             _hasBack = true;
         }
-
-        if (Time.time - _entryTime >= _hatMaxTime && !_hasActive)
-        {
-            _hasActive = true;
-            gameObject.SetActive(false);
-        }
     }
 
     private void FixedUpdate()
