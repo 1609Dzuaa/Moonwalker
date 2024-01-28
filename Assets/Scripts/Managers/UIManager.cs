@@ -52,7 +52,13 @@ public class UIManager : Singleton<UIManager>
     public IEnumerator PopUpWinPanel()
     {
         yield return new WaitForSeconds(_delaySpawnWinPanel);
+        PopUpWin();
+    }
 
+    public void PopUpWin()
+    {
+        if(_loosePanel.activeInHierarchy)
+            return;
         _winPanel.SetActive(true);
         SoundsManager.Instant.PlaySFX(GameEnums.ESoundName.WinGameSfx);
     }

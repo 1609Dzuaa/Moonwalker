@@ -986,6 +986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
+    - target: {fileID: 193035033665887681, guid: e5385db5713718b4dbbbd163b1967597, type: 3}
+      propertyPath: _maxTimePlay
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 193035033665887683, guid: e5385db5713718b4dbbbd163b1967597, type: 3}
       propertyPath: m_RootOrder
       value: 5
