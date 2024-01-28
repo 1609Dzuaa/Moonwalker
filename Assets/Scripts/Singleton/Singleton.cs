@@ -26,11 +26,11 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         if(_instant != null && _instant.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         else
         {
-            _instant = this.GetComponent<T>();
+            _instant = GetComponent<T>();
         }
     }
 }

@@ -7,6 +7,8 @@ public class UIManager : Singleton<UIManager>
 {
     GameObject _loosePanel;
 
+    [SerializeField] float _delaySpawnWinPanel;
+
     public override void Awake()
     {
         base.Awake();
@@ -15,8 +17,9 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
-        _loosePanel = GameObject.FindWithTag("Respawn");
-        _loosePanel.SetActive(false);
+        _loosePanel = GameObject.FindWithTag("LooseTag");
+        if (_loosePanel)
+            _loosePanel.SetActive(false);
     }
 
     public void PopUpLoosePanel()
