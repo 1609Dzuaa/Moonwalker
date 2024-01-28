@@ -8,6 +8,8 @@ public class UIManager : Singleton<UIManager>
     GameObject _loosePanel;
     GameObject _winPanel;
 
+    [SerializeField] float _delaySpawnWinPanel;
+
     public override void Awake()
     {
         base.Awake();

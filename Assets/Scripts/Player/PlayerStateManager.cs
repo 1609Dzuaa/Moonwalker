@@ -22,6 +22,7 @@ public class PlayerStateManager : MonoBehaviour
     bool _detectedGround;
     bool _isFacingRight;
     bool _canThrowHat = true;
+    bool _isLock;
 
     #region States
 
@@ -32,6 +33,7 @@ public class PlayerStateManager : MonoBehaviour
     PlayerHatAttack _hatAttack = new();
     PlayerStompAttack _stompAttack = new();
     PlayerGotHitState _gotHit = new();
+    PlayerAutoMoveState _autoMove = new();
 
     #endregion
 
@@ -126,14 +128,16 @@ public class PlayerStateManager : MonoBehaviour
     {
         if (collision.CompareTag("Enemies"))
             ChangeState(GotHit);
-        else if(collision.CompareTag("Finish"))
+        else if(collision.CompareTag("Finish") && !_isLock)
         {
-            Debug.Log("Trigger Finish");
+            _isLock = true;
+            ChangeState(_autoMove);
         }
     }
 
     private void HandleFlipSprite()
     {
+        if (_isLock) return;
         if (_isFacingRight && _dirX < 0)
             FlippingSprite();
         else if (!_isFacingRight && _dirX > 0)
@@ -188,7 +192,6 @@ public class PlayerStateManager : MonoBehaviour
     private void AllowUpdateStompAttack()
     {
         _stompAttack._allowUpdate = true;
-        _stomp.SetActive(false);
     }
 
     private void BlockIfOutOfMinBoundary()
@@ -200,6 +203,11 @@ public class PlayerStateManager : MonoBehaviour
     private void CanDamageEnemies()
     {
         _stomp.SetActive(true);
+    }
+
+    private void CantDamageEnemies()
+    {
+        _stomp.SetActive(false);
     }
 
     private void AllowUpdateGotHit()
